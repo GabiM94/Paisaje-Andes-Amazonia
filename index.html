@@ -177,9 +177,6 @@
                     <tr>\
                         <td colspan="2">' + (feature.properties['gridcode'] !== null ? autolinker.link(String(feature.properties['gridcode']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Shape_Area'] !== null ? autolinker.link(String(feature.properties['Shape_Area']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -1425,7 +1422,7 @@
             {label: '<img src="legend/Comunidades_12.png" /> Comunidades', layer: layer_Comunidades_12},
             {label: '<img src="legend/Jondachi_11.png" /> Jondachi', layer: layer_Jondachi_11},
             {label: '<img src="legend/Narupa_10.png" /> Narupa', layer: layer_Narupa_10},]},
-        {label: '<b>Capas</b>',  selectAllCheckbox: true, children: [
+        {label: '<b>Capas</b>', collapsed: true, selectAllCheckbox: true, children: [
             {label: '<img src="legend/PaisajeAndesAmazona_9.png" /> Paisaje Andes Amazonía', layer: layer_PaisajeAndesAmazona_9},
             {label: '<img src="legend/Puntosdemuestreo_8.png" /> Puntos de muestreo', layer: layer_Puntosdemuestreo_8},
             {label: '<img src="legend/Areaparaamortiguamiento_7.png" /> Area para amortiguamiento', layer: layer_Areaparaamortiguamiento_7},
